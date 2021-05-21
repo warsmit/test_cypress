@@ -18,3 +18,4 @@ jobs:
         env:
           CYPRESS_firstName: Joe
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
