@@ -9,6 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: run test
+        run: rm -rf node_modules
+      - name: run test
+        run: yarn install --immutable
+      - name: run test
         run: node test.js
       # - name: Cypress run
       #   uses: cypress-io/github-action@v2
