@@ -6,7 +6,11 @@ async function main() {
   //   headless:false,
   //   args: ["--no-sandbox"]
   // })
-  const browser = await dappeteer.launch(puppeteer)
+  const browser = await dappeteer.launch(puppeteer, {
+    //ignoreDefaultArgs: ['--disable-extensions'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  })
+  //const browser = await dappeteer.launch(puppeteer)
   const metamask = await dappeteer.getMetamask(browser)
 
   // create or import an account
