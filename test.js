@@ -2,7 +2,10 @@ import puppeteer from 'puppeteer'
 import dappeteer from '@schmid.digital/dappeteer'
 
 async function main() {
-  const browser = await dappeteer.launch(puppeteer)
+  const browser = await dappeteer.launch(puppeteer, {
+    headless:false,
+    args: ["--no-sandbox"]
+  })
   const metamask = await dappeteer.getMetamask(browser)
 
   // create or import an account
