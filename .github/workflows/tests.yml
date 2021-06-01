@@ -12,10 +12,10 @@ jobs:
         run: rm -rf node_modules
       - name: yarn install --immutable
         run: yarn install --immutable
-      - name: node -v
-        run: node -v
-      - name: sudo apt-get install chromium-browser
-        run: sudo apt-get install chromium-browser
+      # - name: node -v
+      #   run: node -v
+      # - name: sudo apt-get install chromium-browser
+      #   run: sudo apt-get install chromium-browser
       # - name: ldd chrome | grep not
       #   run: ldd chrome | grep not
       - name: node test.js
