@@ -8,11 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: run test
+      - name: rm -rf node_modules
         run: rm -rf node_modules
-      - name: run test
+      - name: yarn install --immutable
         run: yarn install --immutable
-      - name: run test
+      - name: node test.js
         run: node test.js
         env:
           CI: true
