@@ -12,6 +12,8 @@ jobs:
         run: rm -rf node_modules
       - name: yarn install --immutable
         run: yarn install --immutable
+      - name: sudo apt-get install chromium-browser
+        run: sudo apt-get install chromium-browser
       - name: node test.js
         run: node test.js
         env:
