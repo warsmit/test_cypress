@@ -8,7 +8,7 @@ async function main() {
   // })
   const browser = await dappeteer.launch(puppeteer, {
     //ignoreDefaultArgs: ['--disable-extensions'],
-    headless: false,
+    headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   })
   //const browser = await dappeteer.launch(puppeteer)
