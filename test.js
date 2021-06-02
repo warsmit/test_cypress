@@ -9,7 +9,10 @@ async function main() {
   const browser = await dappeteer.launch(puppeteer, {
     //ignoreDefaultArgs: ['--disable-extensions'],
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: [
+      '--no-sandbox', 
+      '--disable-setuid-sandbox'
+    ],
   })
   //const browser = await dappeteer.launch(puppeteer)
   const metamask = await dappeteer.getMetamask(browser)
@@ -28,6 +31,7 @@ async function main() {
   await payButton.click()
 
   await metamask.confirmTransaction()
+  await browser.close()
 }
 
 main()
