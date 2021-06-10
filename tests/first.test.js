@@ -1,5 +1,5 @@
-import puppeteer from 'puppeteer'
-import dappeteer from '@schmid.digital/dappeteer'
+import { puppeteer } from 'puppeteer';
+import { dappeteer } from '@schmid.digital/dappeteer';
 
 async function main() {
   // const browser = await dappeteer.launch(puppeteer, {
