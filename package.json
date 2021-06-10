@@ -1,0 +1,35 @@
+{
+  "scripts": {
+<<<<<<< HEAD
+    "cy:run": "cypress run",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "jest-puppeteer": "^5.0.4",
+=======
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^7.3.0",
+>>>>>>> cb7475c734d8c9f7bde67cda6981d8eb3c3c15d7
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@schmid.digital/dappeteer": "^2.0.2",
+<<<<<<< HEAD
+    "@types/jest": "^26.0.23",
+    "babel-core": "^6.26.3",
+    "jest": "^27.0.3",
+    "puppeteer": "^10.0.0"
+  }
+=======
+    "puppeteer": "^10.0.0"
+  },
+  "type": "module"
+>>>>>>> cb7475c734d8c9f7bde67cda6981d8eb3c3c15d7
+}

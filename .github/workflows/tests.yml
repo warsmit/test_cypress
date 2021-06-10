@@ -1,0 +1,41 @@
+name: tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    # let's make sure our tests pass on Chrome browser
+    name: Smoke testing
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: rm -rf node_modules
+        run: rm -rf node_modules
+      - name: yarn install --immutable
+        run: yarn install --immutable
+      - name: Install Dependencies
+        uses: actions/setup-node@v1
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+        with:
+          args: install
+      # - name: node -v
+      #   run: node -v
+      # - name: sudo apt-get install chromium-browser
+      #   run: sudo apt-get install chromium-browser
+      # - name: ldd chrome | grep not
+      #   run: ldd chrome | grep not
+      # - name: sudo sysctl -w kernel.unprivileged_userns_clone=1
+      #   run: sudo sysctl -w kernel.unprivileged_userns_clone=1
+      - name: Test Code
+        run: node --trace-warnings test.js
+        env:
+          CI: 'true'
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     browser: chrome
+      #     record: true
+      #     group: Tests on Chrome
+      #   env:
+      #     CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      #     CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
