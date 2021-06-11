@@ -1,1 +1,5 @@
-*       @Icemist @AnastasiiaVashchuk
+# See help here: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
+
+*       @warsmit-projects/cats @warsmit-projects/dogs
+
+CODEOWNERS  @warsmit
