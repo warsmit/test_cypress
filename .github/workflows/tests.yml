@@ -14,21 +14,18 @@ jobs:
       #     sudo apt-get install -y libgbm1
       - name: yarn
         run: yarn
-
       - name: Install Dependencies
       uses: actions/setup-node@v1
       env:
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
       with:
         args: install
-
       - name: Test Code
         uses: mujo-code/puppeteer-headful@master
         env:
           CI: 'true'
         with:
           args: npm test
-          
       - name: yarn test
         run: yarn test -- ./tests/test_pup.test.js
       # - name: yarn install --immutable
