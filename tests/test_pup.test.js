@@ -19,8 +19,8 @@ describe("Test", () => {
     console.log('See screen shot: ' + './image.jpg')
     await page.click('button.prod-ProductCTA--primary')
     await page.waitForSelector('.Cart-PACModal-ItemInfoContainer')
-    await page.screenshot({ path: screenshot })
-    console.log('See screen shot: ' + screenshot)
+    await page.screenshot({ path: './image1.jpg' })
+    console.log('See screen shot: ' + './image1.jpg')
   }, 60000);
 
   test('Close browser', async () => {
