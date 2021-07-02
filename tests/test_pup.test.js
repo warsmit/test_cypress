@@ -4,8 +4,13 @@ describe("Test", () => {
 
   test('test', async () => {
     browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       slowMo: 10,
+      args: [
+        `--no-sandbox`,
+        `--disable-setuid-sandbox`
+      ],
+      executablePath: process.env.PUPPETEER_EXEC_PATH,
     })
     const page = await browser.newPage()
     await page.setViewport({ width: 1280, height: 800 })
