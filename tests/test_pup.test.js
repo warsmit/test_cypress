@@ -3,7 +3,7 @@ describe("Test", () => {
 
   test('test', async () => {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       slowMo: 10,
     })
     const page = await browser.newPage()
