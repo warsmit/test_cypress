@@ -25,9 +25,7 @@ jobs:
         env:
           CI: 'true'
         with:
-          args: npm test
-      - name: yarn test
-        run: yarn test -- ./tests/test_pup.test.js
+          args: yarn test -- ./tests/test_pup.test.js
       # - name: yarn install --immutable
       #   run: yarn install --immutable
       # - name: Install Dependencies
