@@ -7,7 +7,8 @@
   "dependencies": {
     "jest": "^27.0.5",
     "puppeteer": "latest",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "@warsmit/dappeteer": "https://github.com/warsmit/dappeteer.git#ms/develop"
   },
   "version": "2.4.2"
 }
