@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     outputs:
-      date: "${{ steps.date.outputs.date }}"
+      date: "${{ steps.date.outputs.date_1 || steps.date.outputs.date_2 }}"
     # let's make sure our tests pass on Chrome browser
     name: Smoke testing
     steps:
@@ -29,13 +29,13 @@ jobs:
       #   if: github.event_name == 'workflow_dispatch'
       #   run: echo "workflow_dispatch"
       - name: Get run date
-        id: date
+        id: date_1
         if: github.base_ref == 'beta'
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "::set-output name=date::1"
       - name: Get run date
-        id: date
+        id: date_2
         if: github.base_ref != 'beta'
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "::set-output name=date::2"
 
 
   testing:
