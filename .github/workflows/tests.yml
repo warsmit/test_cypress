@@ -8,13 +8,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: test
+        run: |
+          echo "${{ github.event_name }}"
+          echo "${{ github.base_ref }}"
+          echo "${{ github.ref }}"
+          echo "${{ github.head_ref }}"
       - name: test pull_request
         if: github.event_name == 'pull_request'
         run: echo "pull_request"
-      - name: test pull_request beta
+      - name: test pull_request main
         if: github.base_ref == 'refs/heads/main'
-        run: echo "pull_request beta"
-        
+        run: echo "pull_request main"
       - name: test workflow_dispatch
         if: github.event_name == 'workflow_dispatch'
         run: echo "workflow_dispatch"
