@@ -8,6 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: test
+        run: |
+          echo "${{ github.event_name }}"
+          echo "${{ github.base_ref }}"
+          echo "${{ github.ref }}"
+          echo "${{ github.head_ref }}"
       - name: test pull_request
         if: github.event_name == 'pull_request'
         run: echo "pull_request"
