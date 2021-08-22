@@ -20,6 +20,7 @@ jobs:
       - name: test pull_request main
         if: github.base_ref == 'refs/heads/main'
         run: echo "pull_request main"
+        
       - name: test workflow_dispatch
         if: github.event_name == 'workflow_dispatch'
         run: echo "workflow_dispatch"
