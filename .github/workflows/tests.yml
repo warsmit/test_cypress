@@ -6,6 +6,12 @@ jobs:
     # let's make sure our tests pass on Chrome browser
     name: Smoke testing
     steps:
+      - name: test
+        run: |
+          echo "${{ github.event_name }}"
+          echo "${{ github.base_ref }}"
+          echo "${{ github.ref }}"
+          echo "${{ github.head_ref }}"
       - name: Checkout
         uses: actions/checkout@v2
       - name: test pull_request
