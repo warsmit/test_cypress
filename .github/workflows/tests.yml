@@ -20,22 +20,6 @@ jobs:
       - name: test pull_request main
         if: github.base_ref == 'refs/heads/main'
         run: echo "pull_request main"
-      - name: test pull_request main
-        if: github.ref == 'refs/heads/main'
-        run: echo "pull_request main"
-      - name: test pull_request main
-        if: github.head_ref == 'refs/heads/main'
-        run: echo "pull_request main"
-      - name: test pull_request beta
-        if: github.base_ref == 'refs/heads/beta'
-        run: echo "pull_request beta"
-      - name: test pull_request beta
-        if: github.ref == 'refs/heads/beta'
-        run: echo "pull_request beta"
-      - name: test pull_request beta
-        if: github.head_ref == 'refs/heads/beta'
-        run: echo "pull_request beta"
-        
       - name: test workflow_dispatch
         if: github.event_name == 'workflow_dispatch'
         run: echo "workflow_dispatch"
