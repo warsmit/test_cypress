@@ -1,5 +1,5 @@
 name: tests
-on: [push, workflow_dispatch]
+on: [pull_request, workflow_dispatch]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -8,10 +8,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: rm -rf node_modules
-        run: rm -rf node_modules
-      - name: yarn install --immutable
-        run: yarn install --immutable
+      - name: test pull_request
+        if: '${{ github.event.pull_request }}'
+        run: echo "pull_request"
+      - name: test workflow_dispatch
+        if: '${{ github.event.workflow_dispatch }}'
+        run: echo "workflow_dispatch"
+#       - name: rm -rf node_modules
+#         run: rm -rf node_modules
+#       - name: yarn install --immutable
+#         run: yarn install --immutable
 #       - name: Install Dependencies
 #         uses: actions/setup-node@v1
 #         env:
