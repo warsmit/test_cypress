@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     outputs:
-      date: "${{ steps.date.outputs.date }}"
+      date: "${{ steps.date_1.outputs.date || steps.date_2.outputs.date }}"
     # let's make sure our tests pass on Chrome browser
     name: Smoke testing
     steps:
