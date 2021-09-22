@@ -1,0 +1,18 @@
+[package]
+name = "temp"
+version = "1.0.0"
+authors = [
+    "123",
+]
+license = "Apache-2.0"
+edition = "2018"
+description = "123"
+
+[[bin]]
+name = "temp"
+
+[lib]
+doctest = false
+
+[dependencies]
+compiler-common = { git = "https://github.com/matter-labs/compiler-common", branch = "main" }

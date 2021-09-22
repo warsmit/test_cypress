@@ -1,0 +1,14 @@
+[build]
+rustflags = [
+    "-W", "missing_docs",
+]
+incremental = true
+
+[tools.clippy]
+warn = [
+    "missing_docs_in_private_items",
+]
+
+# which will instruct Cargo to fetch git repositories with the git CLI rather than with libgit2. Using this will read .ssh/config because that's what git does.
+[net]
+git-fetch-with-cli = true

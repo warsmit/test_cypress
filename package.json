@@ -16,6 +16,7 @@
     "@schmid.digital/dappeteer": "^2.0.2",
     "@types/jest": "^26.0.23",
     "babel-core": "^6.26.3",
+    "cargo": "^0.8.0",
     "jest": "^27.0.3",
     "puppeteer": "^10.0.0"
   }
