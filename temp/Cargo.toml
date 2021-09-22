@@ -15,4 +15,4 @@ name = "temp"
 doctest = false
 
 [dependencies]
-compiler-common = { git = "https://github.com/matter-labs/compiler-common", branch = "main" }
+compiler-common = { git = "git@github.com:warsmit-projects/test_ci.git" }
